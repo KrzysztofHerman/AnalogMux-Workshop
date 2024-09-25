@@ -1,0 +1,58 @@
+** sch_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate_tb_Off-Isolation.sch
+**.subckt transmission_gate_tb_Off-Isolation
+Vpow Vdd GND 1.2
+Vp Vdd net3 0
+.save i(vp)
+Ven en_p GND 0
+Ven1 en_n GND 1.2
+x1 net3 en_n net2 net1 en_p GND transmission_gate
+V1 net2 GND dc 0 ac 1 portnum 1 z0 50
+V2 net1 GND dc 0 ac 0 portnum 2 z0 50
+**** begin user architecture code
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerRES.lib res_typ
+
+
+
+.param temp=27
+.options noacct
+.control
+save all
+sp dec 101 10Meg 10G 0
+meas ac s21 FIND s_2_1 AT=100MEG
+let dbs21=20*log10(-s21)
+print dbs21
+write offisolation.raw
+set hcopydevtype=svg
+set color0=white
+set color1=black
+set color2=red
+set color3=blue
+set color4=green
+hardcopy off-isol.svg s_2_1  title 'Transfer function' xlabel 'frequency' ylabel 'S_21' xlog
+
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  transmission_gate.sym # of pins=6
+** sym_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate.sym
+** sch_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate.sch
+.subckt transmission_gate vdd en_n inout_1 inout_2 en_p vss
+*.iopin inout_1
+*.iopin inout_2
+*.ipin en_p
+*.iopin vdd
+*.iopin vss
+*.ipin en_n
+XM1 inout_2 en_p inout_1 net1 sg13_lv_nmos w=200.0u l=0.130u ng=20 m=1
+XM2 inout_1 en_n inout_2 net2 sg13_lv_pmos w=200.0u l=0.130u ng=20 m=1
+XR1 net2 vdd ntap1
+XR2 net1 vss ptap1
+.ends
+
+.GLOBAL GND
+.end

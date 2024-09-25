@@ -1,0 +1,60 @@
+** sch_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate_tb_RON.sch
+**.subckt transmission_gate_tb_RON
+Vpow Vdd GND 1.2
+Vp Vdd net1 0
+.save i(vp)
+Vin V_in GND 0.8
+Ven en_p GND 1.2
+Ven1 en_n GND 0
+x1 net1 en_n V_in V_out1 en_p GND transmission_gate
+I0 V_out1 GND {Iload}
+Vp1 Vdd net2 0
+.save i(vp1)
+x2 net2 en_n V_out2 V_in en_p GND transmission_gate
+I1 V_out2 GND {Iload}
+**** begin user architecture code
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerRES.lib res_typ
+
+
+
+.param temp=27
+.param Iload=1m
+.control
+save all
+dc Vin 1m 1.2 1m
+let Ron=(V(V_in)-V(V_out2))/0.001
+write dc_RON.raw
+set hcopydevtype=svg
+set color0=white
+set color1=black
+set color2=red
+set color3=blue
+set color4=green
+hardcopy Ron.svg Ron title 'ON resistance' xlabel 'Input voltage' ylabel 'Ron'
+hardcopy Lin.svg V_in V_out1 V_out2 title 'Gate linearity' xlabel 'Input voltage' ylabel 'Outputs' ylimit 0 1.2
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  transmission_gate.sym # of pins=6
+** sym_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate.sym
+** sch_path: /home/herman/tmp/ts_pr_May2024/design_data/xschem/transmission_gate.sch
+.subckt transmission_gate vdd en_n inout_1 inout_2 en_p vss
+*.iopin inout_1
+*.iopin inout_2
+*.ipin en_p
+*.iopin vdd
+*.iopin vss
+*.ipin en_n
+XM1 inout_2 en_p inout_1 net1 sg13_lv_nmos w=200.0u l=0.130u ng=20 m=1
+XM2 inout_1 en_n inout_2 net2 sg13_lv_pmos w=200.0u l=0.130u ng=20 m=1
+XR1 net2 vdd ntap1
+XR2 net1 vss ptap1
+.ends
+
+.GLOBAL GND
+.end
