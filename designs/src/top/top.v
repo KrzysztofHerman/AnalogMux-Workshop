@@ -73,6 +73,9 @@ wire mux_out;
   );
 
 (* keep *)
+bondpad_70x70 bondpad ();
+
+(* keep *)
 control control_macro (
     .clk(clk),
     .rst(rst_n),

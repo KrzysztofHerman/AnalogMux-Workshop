@@ -2,3 +2,7 @@ objects/*
 reports/*
 results/*
 logs/*
+design_data/netlist/tgate/schematic/transmission_gate.spice
+simulations/*
+runs/*
+docs/*

@@ -6,7 +6,8 @@ export PLATFORM    = ihp-sg13g2
 
 export VERILOG_FILES =  $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/top.v \
                         $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/control.v \
-                        $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/spi.v
+                        $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/spi.v \
+                        $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/bondpad_70x70.v
 
 
 export SDC_FILE      = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc
