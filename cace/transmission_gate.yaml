@@ -1,0 +1,96 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           transmission_gate
+description:    A simple transmission gate
+PDK:            ihp-sg13g2
+
+cace_format:    5.2
+
+authorship:
+  designer:         
+  company:         
+  creation_date:    
+  license:          Apache 2.0
+
+paths:
+  root:             ..
+  schematic:        design_data/xschem/tgate
+  netlist:          design_data/netlist/tgate
+  documentation:    docs
+
+pins:
+  VDD:
+    description: Positive analog power supply
+    type: power
+    direction: inout
+    Vmin: 1.7
+    Vmax: 1.9
+  VSS:
+    description: Analog ground
+    type: ground
+    direction: inout
+
+default_conditions:
+  vdd:
+    description: Analog power supply voltage
+    display: Vdd
+    unit: V
+    typical: 1.8
+  corner:
+    description: Process corner
+    display: Corner
+    typical: tt
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    typical: 27
+
+parameters:
+  ac_params:
+    display: AC Params
+    spec:
+      psrr:
+        display: DC gain
+        description: The AC psrr
+        unit: dB
+        minimum:
+          value: any
+        typical:
+          value: -70
+        maximum:
+          value: -65
+    tool:
+      ngspice:
+        template: transmission_gate_tb_PSRR.sch
+        format: ascii
+        suffix: .data
+        variables: [psrr]
+    conditions:
+      corner:
+        enumerate: [ss, tt, ff]
+
+  dc_params:
+    display: DC Params
+    spec:
+      ron:
+        display: Ron
+        description: The On-Resistance
+        unit: ohm
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: transmission_gate_tb_RON.sch
+        format: ascii
+        suffix: .data
+        variables: [ron]
+    conditions:
+      corner:
+        enumerate: [ss, tt, ff]
