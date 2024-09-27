@@ -10,7 +10,7 @@ MIXED_OBJ = control_obj_dir
 VCD_FILE = control_tb.vcd
 SRC_FILES = control.v spi.v control_tb.v
 NGSPICE_FILE = control.v
-DEST_DIR = ../xschem/multiplexer/simulations
+DEST_DIR = ../../xschem/multiplexer/simulations
 # Default target
 all: run_wave
 
@@ -27,7 +27,7 @@ copy:
 
 # Open the wave file in GTKWave
 wave: $(VCD_FILE)
-	$(GTKWAVE) $(VCD_FILE)
+	$(GTKWAVE) $(VCD_FILE) conf.gtkw
 
 # Run ngspice vlnggen command
 ngspice:
@@ -37,7 +37,7 @@ ngspice:
 run_wave: run wave
 
 # Run ngspice and then the rest of the steps
-full: ngspice run_wave
+full: ngspice run_wave copy
 
 # Clean up generated files
 clean:
