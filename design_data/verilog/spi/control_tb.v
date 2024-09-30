@@ -41,7 +41,7 @@ module control_tb();
         ss = 1;
         mosi = 0;
         sck = 0;
-        din = 8'h80;  // Example input data to be sent to the master
+        din = 8'h40;  // Example input data to be sent to the master
 
         // Apply reset
         #10 rst = 0;

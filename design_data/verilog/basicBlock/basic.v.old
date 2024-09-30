@@ -1,0 +1,16 @@
+
+module basic(
+    input [1:0]  din,
+    output [1:0] dout
+  );
+
+  reg [1:0] dout_r;
+  assign dout = dout_r;
+  
+  always@(*) begin
+    dout_r[0] = din[0] & din[1];
+    dout_r[1] = ~(din[0] | din[1]);
+  end
+
+endmodule
+

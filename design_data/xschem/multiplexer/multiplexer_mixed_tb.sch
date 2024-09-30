@@ -27,7 +27,7 @@ logy=0
 y1=1.1e-16
 rainbow=0
 
-color="4 4 4 4 4 4 4 4"
+color="4 5 6 7 8 9 10 12"
 node="v_in1
 v_in2
 v_in3
@@ -72,7 +72,7 @@ en8_p"
 hilight_wave=1}
 B 2 440 -290 1240 110 {flags=graph
 
-y2=0.94
+y2=1.69168
 ypos1=0
 ypos2=2
 divy=5
@@ -89,7 +89,7 @@ logx=0
 logy=0
 
 
-y1=0.0004
+y1=0.75208
 rainbow=0
 
 color=9

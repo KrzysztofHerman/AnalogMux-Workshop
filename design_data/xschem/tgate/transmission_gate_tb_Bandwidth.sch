@@ -96,10 +96,9 @@ value="
 C {devices/code_shown.sym} -230 -520 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.options noacct
 .control
 save all 
-sp dec 101 10Meg 10G 0
+sp dec 1001 10Meg 10G 0
 meas ac s21 FIND s_2_1 AT=100MEG
 let dbs21=0.707*s21
 meas ac freq_at when s_2_1=dbs21
