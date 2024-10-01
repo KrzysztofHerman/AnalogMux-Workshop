@@ -1,0 +1,460 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+UNITS
+    DATABASE MICRONS 1000 ;
+END UNITS
+
+VIA via1_2_2200_440_1_5_410_410
+  VIARULE via1Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal1 Via1 Metal2 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.01 0.125 0.05 0.005 ;
+  ROWCOL 1 5 ;
+END via1_2_2200_440_1_5_410_410
+
+VIA via2_3_2200_440_1_5_410_410
+  VIARULE via2Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal2 Via2 Metal3 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.05 0.005 0.005 0.05 ;
+  ROWCOL 1 5 ;
+END via2_3_2200_440_1_5_410_410
+
+VIA via3_4_2200_440_1_5_410_410
+  VIARULE via3Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal3 Via3 Metal4 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.005 0.05 0.05 0.005 ;
+  ROWCOL 1 5 ;
+END via3_4_2200_440_1_5_410_410
+
+VIA via4_5_2200_440_1_5_410_410
+  VIARULE via4Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal4 Via4 Metal5 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.05 0.005 0.185 0.05 ;
+  ROWCOL 1 5 ;
+END via4_5_2200_440_1_5_410_410
+
+VIA via5_6_2200_2200_2_2_840_840
+  VIARULE viagen56 ;
+  CUTSIZE 0.42 0.42 ;
+  LAYERS Metal5 TopVia1 TopMetal1 ;
+  CUTSPACING 0.42 0.42 ;
+  ENCLOSURE 0.47 0.1 0.42 0.47 ;
+  ROWCOL 2 2 ;
+END via5_6_2200_2200_2_2_840_840
+
+MACRO control
+  FOREIGN control 0 0 ;
+  CLASS BLOCK ;
+  SIZE 110.22 BY 110.22 ;
+  PIN VSS
+    USE GROUND ;
+    DIRECTION INOUT ;
+    PORT
+      LAYER TopMetal1 ;
+        RECT  16.58 31.4 93.82 33.6 ;
+      LAYER Metal5 ;
+        RECT  29.3 18.68 31.5 87.16 ;
+      LAYER Metal1 ;
+        RECT  16.8 86.72 93.6 87.16 ;
+        RECT  16.8 79.16 93.6 79.6 ;
+        RECT  16.8 71.6 93.6 72.04 ;
+        RECT  16.8 64.04 93.6 64.48 ;
+        RECT  16.8 56.48 93.6 56.92 ;
+        RECT  16.8 48.92 93.6 49.36 ;
+        RECT  16.8 41.36 93.6 41.8 ;
+        RECT  16.8 33.8 93.6 34.24 ;
+        RECT  16.8 26.24 93.6 26.68 ;
+        RECT  16.8 18.68 93.6 19.12 ;
+      VIA 30.4 32.5 via5_6_2200_2200_2_2_840_840 ;
+      VIA 30.4 86.94 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 86.94 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 86.94 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 86.94 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 79.38 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 79.38 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 79.38 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 79.38 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 71.82 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 71.82 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 71.82 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 71.82 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 64.26 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 64.26 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 64.26 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 64.26 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 56.7 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 56.7 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 56.7 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 56.7 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 49.14 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 49.14 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 49.14 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 49.14 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 41.58 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 41.58 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 41.58 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 41.58 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 34.02 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 34.02 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 34.02 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 34.02 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 26.46 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 26.46 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 26.46 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 26.46 via1_2_2200_440_1_5_410_410 ;
+      VIA 30.4 18.9 via4_5_2200_440_1_5_410_410 ;
+      VIA 30.4 18.9 via3_4_2200_440_1_5_410_410 ;
+      VIA 30.4 18.9 via2_3_2200_440_1_5_410_410 ;
+      VIA 30.4 18.9 via1_2_2200_440_1_5_410_410 ;
+    END
+  END VSS
+  PIN VDD
+    USE POWER ;
+    DIRECTION INOUT ;
+    PORT
+      LAYER TopMetal1 ;
+        RECT  16.58 69.2 93.82 71.4 ;
+      LAYER Metal5 ;
+        RECT  67.1 22.46 69.3 90.94 ;
+      LAYER Metal1 ;
+        RECT  16.8 90.5 93.6 90.94 ;
+        RECT  16.8 82.94 93.6 83.38 ;
+        RECT  16.8 75.38 93.6 75.82 ;
+        RECT  16.8 67.82 93.6 68.26 ;
+        RECT  16.8 60.26 93.6 60.7 ;
+        RECT  16.8 52.7 93.6 53.14 ;
+        RECT  16.8 45.14 93.6 45.58 ;
+        RECT  16.8 37.58 93.6 38.02 ;
+        RECT  16.8 30.02 93.6 30.46 ;
+        RECT  16.8 22.46 93.6 22.9 ;
+      VIA 68.2 70.3 via5_6_2200_2200_2_2_840_840 ;
+      VIA 68.2 90.72 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 90.72 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 90.72 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 90.72 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 83.16 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 83.16 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 83.16 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 83.16 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 75.6 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 75.6 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 75.6 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 75.6 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 68.04 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 68.04 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 68.04 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 68.04 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 60.48 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 60.48 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 60.48 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 60.48 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 52.92 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 52.92 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 52.92 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 52.92 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 45.36 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 45.36 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 45.36 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 45.36 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 37.8 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 37.8 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 37.8 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 37.8 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 30.24 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 30.24 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 30.24 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 30.24 via1_2_2200_440_1_5_410_410 ;
+      VIA 68.2 22.68 via4_5_2200_440_1_5_410_410 ;
+      VIA 68.2 22.68 via3_4_2200_440_1_5_410_410 ;
+      VIA 68.2 22.68 via2_3_2200_440_1_5_410_410 ;
+      VIA 68.2 22.68 via1_2_2200_440_1_5_410_410 ;
+    END
+  END VDD
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  35.9 0 36.1 0.72 ;
+    END
+  END clk
+  PIN dout_n[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  63.74 109.5 63.94 110.22 ;
+    END
+  END dout_n[0]
+  PIN dout_n[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 70.04 110.22 70.24 ;
+    END
+  END dout_n[1]
+  PIN dout_n[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 70.88 110.22 71.08 ;
+    END
+  END dout_n[2]
+  PIN dout_n[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 60.8 110.22 61 ;
+    END
+  END dout_n[3]
+  PIN dout_n[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 56.6 110.22 56.8 ;
+    END
+  END dout_n[4]
+  PIN dout_n[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 50.72 110.22 50.92 ;
+    END
+  END dout_n[5]
+  PIN dout_n[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 47.36 110.22 47.56 ;
+    END
+  END dout_n[6]
+  PIN dout_n[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 42.32 110.22 42.52 ;
+    END
+  END dout_n[7]
+  PIN dout_p[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  65.66 109.5 65.86 110.22 ;
+    END
+  END dout_p[0]
+  PIN dout_p[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 68.36 110.22 68.56 ;
+    END
+  END dout_p[1]
+  PIN dout_p[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 69.2 110.22 69.4 ;
+    END
+  END dout_p[2]
+  PIN dout_p[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 59.96 110.22 60.16 ;
+    END
+  END dout_p[3]
+  PIN dout_p[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 55.76 110.22 55.96 ;
+    END
+  END dout_p[4]
+  PIN dout_p[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 49.88 110.22 50.08 ;
+    END
+  END dout_p[5]
+  PIN dout_p[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 46.52 110.22 46.72 ;
+    END
+  END dout_p[6]
+  PIN dout_p[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  109.5 41.48 110.22 41.68 ;
+    END
+  END dout_p[7]
+  PIN miso
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  50.3 0 50.5 0.72 ;
+    END
+  END miso
+  PIN mosi
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  0 70.88 0.72 71.08 ;
+    END
+  END mosi
+  PIN rst
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  48.38 0 48.58 0.72 ;
+    END
+  END rst
+  PIN sck
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  33.98 0 34.18 0.72 ;
+    END
+  END sck
+  PIN ss
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  34.94 0 35.14 0.72 ;
+    END
+  END ss
+  OBS
+    LAYER Metal1 ;
+     RECT  16.8 18.68 93.6 90.94 ;
+    LAYER Metal2 ;
+     RECT  0.38 69.62 0.48 70.66 ;
+     RECT  0.48 69.62 1.06 71.08 ;
+     RECT  1.06 69.62 29.435 69.82 ;
+     RECT  29.435 18.8 31.365 87.04 ;
+     RECT  31.365 18.8 35.9 25.3 ;
+     RECT  31.365 69.62 40.64 69.82 ;
+     RECT  40.64 69.45 41.66 69.855 ;
+     RECT  42.565 40.22 42.62 40.42 ;
+     RECT  42.62 38.12 43.58 40.42 ;
+     RECT  43.58 38.12 44 41.68 ;
+     RECT  35.9 17.12 44.06 25.3 ;
+     RECT  44 35.985 44.06 41.68 ;
+     RECT  44.06 17.12 48.38 41.68 ;
+     RECT  41.66 69.45 48.86 71.08 ;
+     RECT  48.86 66.26 50.06 71.08 ;
+     RECT  50.06 65.42 53.66 71.08 ;
+     RECT  53.66 65 54.62 71.08 ;
+     RECT  54.62 65 55.58 71.92 ;
+     RECT  55.58 65 57.5 74.02 ;
+     RECT  57.5 58.28 59.42 74.02 ;
+     RECT  48.38 17.12 59.62 44.2 ;
+     RECT  59.62 19.22 60.38 44.2 ;
+     RECT  59.42 57.86 60.38 74.02 ;
+     RECT  61.82 84.74 63.74 84.94 ;
+     RECT  60.38 19.22 64.7 74.02 ;
+     RECT  64.7 19.22 67.235 74.44 ;
+     RECT  63.74 84.74 67.235 89.98 ;
+     RECT  67.235 19.22 69.165 90.82 ;
+     RECT  69.165 19.22 70.18 74.44 ;
+     RECT  70.18 22.16 76.9 74.44 ;
+     RECT  76.9 22.16 77.86 73.6 ;
+     RECT  77.86 27.2 78.82 73.6 ;
+     RECT  78.82 30.98 81.7 73.6 ;
+     RECT  81.7 32.24 90.14 73.18 ;
+     RECT  90.14 32.24 91.58 77.38 ;
+     RECT  91.58 31.82 92.06 77.38 ;
+     RECT  92.06 28.46 92.26 77.38 ;
+     RECT  92.26 28.46 92.74 76.54 ;
+     RECT  92.74 28.46 93.46 59.74 ;
+     RECT  92.74 68.36 93.46 76.54 ;
+     RECT  93.46 28.88 93.7 59.74 ;
+     RECT  93.46 68.36 93.7 72.76 ;
+     RECT  93.7 28.88 94.18 29.08 ;
+     RECT  93.7 38.54 94.18 59.74 ;
+     RECT  94.18 41.48 101.66 59.74 ;
+     RECT  93.7 68.36 101.66 71.08 ;
+     RECT  101.66 41.48 109.92 71.08 ;
+    LAYER Metal3 ;
+     RECT  33.98 0.42 36.1 2.62 ;
+     RECT  33.98 2.62 35.62 14.3 ;
+     RECT  48.38 0.42 50.5 17.12 ;
+     RECT  33.98 14.3 36.1 18.755 ;
+     RECT  48.38 17.12 59.62 20.06 ;
+     RECT  69.98 19.22 70.18 20.06 ;
+     RECT  29.48 18.755 36.1 20.48 ;
+     RECT  48.38 20.06 70.18 20.48 ;
+     RECT  29.48 20.48 70.18 22.16 ;
+     RECT  93.02 28.46 93.22 28.88 ;
+     RECT  29.48 22.16 77.86 29.08 ;
+     RECT  93.02 28.88 94.18 31.82 ;
+     RECT  43.1 29.08 77.86 32.66 ;
+     RECT  90.14 31.82 94.18 32.66 ;
+     RECT  43.1 32.66 94.18 38.74 ;
+     RECT  48.38 38.74 93.7 39.16 ;
+     RECT  49.34 39.16 93.7 42.94 ;
+     RECT  49.82 42.94 93.7 47.14 ;
+     RECT  60.38 47.14 93.7 48.4 ;
+     RECT  63.74 48.4 93.7 58.28 ;
+     RECT  49.82 47.14 50.02 58.7 ;
+     RECT  60.38 58.28 93.7 58.7 ;
+     RECT  49.82 58.7 93.7 64.7 ;
+     RECT  49.34 64.7 93.7 66.46 ;
+     RECT  44.06 66.68 44.26 69.82 ;
+     RECT  54.62 66.46 93.7 71.92 ;
+     RECT  57.5 71.92 93.7 72.76 ;
+     RECT  57.5 72.76 93.22 73.18 ;
+     RECT  58.94 73.18 93.22 74.44 ;
+     RECT  90.62 74.44 93.22 76.54 ;
+     RECT  90.62 76.54 91.78 77.38 ;
+     RECT  61.82 74.44 69.12 84.94 ;
+     RECT  29.48 29.08 31.32 87.085 ;
+     RECT  63.74 84.94 69.12 90.865 ;
+     RECT  63.74 90.865 65.86 109.62 ;
+    LAYER Metal4 ;
+     RECT  29.435 18.8 31.365 87.04 ;
+     RECT  52.7 36.02 58.66 36.22 ;
+     RECT  65.18 50.72 67.235 50.92 ;
+     RECT  67.235 22.58 69.165 90.82 ;
+     RECT  69.165 50.72 82.46 50.92 ;
+     RECT  82.46 50.72 83.14 58.48 ;
+     RECT  83.14 58.28 85.54 58.48 ;
+     RECT  83.42 35.6 94.18 35.8 ;
+    LAYER Metal5 ;
+     RECT  29.3 18.68 31.5 87.16 ;
+     RECT  67.1 22.46 69.3 90.94 ;
+    LAYER TopMetal1 ;
+     RECT  16.58 31.4 93.82 71.4 ;
+  END
+END control
+END LIBRARY
