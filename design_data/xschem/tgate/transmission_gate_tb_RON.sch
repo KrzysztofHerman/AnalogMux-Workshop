@@ -24,7 +24,7 @@ logx=0
 logy=0
 
 
-y1=-0.029
+y1=-0.002
 rainbow=0
 
 color="6 9 8"
@@ -148,7 +148,7 @@ value="
 C {devices/code_shown.sym} -320 -460 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.param Iload=1m
+.param Iload=10m
 .control
 save all 
 dc Vin 1m 1.2 1m

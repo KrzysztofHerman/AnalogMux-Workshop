@@ -23,7 +23,7 @@ G {}
 K {type=delay
 verilog_ignore=true
 vhdl_ignore=true
-format="@name [ @@clk @@rst @@din0 @@din1 ] [ @@dout1 @@dout0 ] null @dut 
+format="@name [ @@clk @@rst @@din0 @@din1 ] [ @@dout0 @@dout1 ] null @dut 
 .model @dut @d_cosim_model  simulation=@model"
 template="name=adut
 dut=dut

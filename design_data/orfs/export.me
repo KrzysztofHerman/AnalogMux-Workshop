@@ -1,5 +1,5 @@
 #design specific 
-export ORFS_ROOT=$ORFS_DIR
+export ORFS_ROOT=/home/herman/github/KrzysztofHerman/OpenROAD-flow-scripts
 export OPENROAD_EXE=$(command -v openroad)
 export YOSYS_CMD=$(command -v yosys)
 export WORK_HOME=$(pwd)
@@ -10,7 +10,10 @@ export DESIGN_CONFIG=${DESIGN_HOME}/ihp-sg13g2/top/config.mk
 
 ##### update the platform config.mk
 
-sudo chown -R designer /opt/pdks/ihp-sg13g2
-cp sg13g2_io_dummy.lib /opt/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lib/
+#sudo chown -R designer /opt/pdks/ihp-sg13g2
+#cp sg13g2_io_dummy.lib /opt/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lib/
 
-#sudo cp config.mk /opt/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/
+# sudo cp config.mk /opt/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/
+
+
+

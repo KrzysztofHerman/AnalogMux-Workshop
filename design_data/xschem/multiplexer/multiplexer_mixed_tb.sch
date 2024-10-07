@@ -7,13 +7,13 @@ S {}
 E {}
 B 2 440 -710 1240 -310 {flags=graph
 
-y2=1.3
+y2=1.56
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
+x1=1.6940659e-21
 x2=0.00022
 divx=5
 subdivx=1
@@ -24,7 +24,7 @@ logx=0
 logy=0
 
 
-y1=1.1e-16
+y1=0.26
 rainbow=0
 
 color="4 5 6 7 8 9 10 12"
@@ -38,13 +38,13 @@ v_in7
 v_in8"}
 B 2 440 -1140 1240 -740 {flags=graph
 
-y2=1.3
+y2=2.86
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
+x1=1.6940659e-21
 x2=0.00022
 divx=5
 subdivx=1
@@ -55,7 +55,7 @@ logx=0
 logy=0
 
 
-y1=0
+y1=1.56
 rainbow=0
 
 
@@ -72,13 +72,13 @@ en8_p"
 hilight_wave=1}
 B 2 440 -290 1240 110 {flags=graph
 
-y2=1.69168
+y2=0.94
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
+x1=1.6940659e-21
 x2=0.00022
 divx=5
 subdivx=1
@@ -89,7 +89,7 @@ logx=0
 logy=0
 
 
-y1=0.75208
+y1=0.0004
 rainbow=0
 
 color=9
@@ -102,7 +102,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
+x1=1.6940659e-21
 x2=0.00022
 divx=5
 subdivx=1
@@ -303,7 +303,7 @@ C {devices/lab_pin.sym} -30 -860 0 0 {name=p48 sig_type=std_logic lab=en7_n}
 C {devices/lab_pin.sym} -30 -940 0 0 {name=p49 sig_type=std_logic lab=V_in8}
 C {devices/lab_pin.sym} -30 -900 0 0 {name=p50 sig_type=std_logic lab=en8_p}
 C {devices/lab_pin.sym} -30 -920 0 0 {name=p51 sig_type=std_logic lab=en8_n}
-C {control.sym} 130 -190 0 0 {name=adut
+C {control.sym} 140 -190 0 0 {name=adut
 dut=dut
 d_cosim_model= d_cosim
 model=./control.so
@@ -367,7 +367,7 @@ d_osc_model=d_osc
 freq=100k
 }
 C {devices/vsource.sym} -350 -20 0 0 {name=Vsck value="dc 0 ac 0 pulse(0 1.2 30u 10n 10n 10u 20u 8)"}
-C {devices/vsource.sym} -290 50 0 0 {name=Vmosi value="dc 0 ac 0 pulse(0 1.2 42u 10n 10n 20u 80u 1)"}
+C {devices/vsource.sym} -290 50 0 0 {name=Vmosi value="dc 0 ac 0 pulse(0 1.2 62u 10n 10n 20u 80u 1)"}
 C {devices/vsource.sym} -230 120 0 0 {name=Vss value="dc 0 ac 0 pulse(1.2 0 20u 10n 10n 170u 200u 1)"}
 C {devices/gnd.sym} -490 -150 0 0 {name=l4 lab=GND}
 C {devices/gnd.sym} -410 -60 0 0 {name=l7 lab=GND}

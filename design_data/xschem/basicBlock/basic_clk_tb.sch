@@ -227,9 +227,9 @@ C {devices/lab_pin.sym} -40 -270 1 0 {name=p1 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 20 -270 1 0 {name=p2 sig_type=std_logic lab=rst}
 C {devices/lab_pin.sym} 750 -160 2 0 {name=p21 sig_type=std_logic lab=dout1}
 C {devices/lab_pin.sym} 750 -180 2 0 {name=p22 sig_type=std_logic lab=dout0}
-C {devices/vsource.sym} -250 -150 0 0 {name=Vrst1 value="dc 0 ac 0 pulse(0 1.2 0 10n 10n 5u 10u)"}
+C {devices/vsource.sym} -250 -150 0 0 {name=Vrst1 value="dc 0 ac 0 pulse(0 1.2 0u 10n 10n 5u 10u)"}
 C {devices/gnd.sym} 680 -320 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} 10 130 0 0 {name=Vrst2 value="dc 0 ac 0 pulse(0 1.2 20u 10n 10n 10u 20u)"}
+C {devices/vsource.sym} 10 130 0 0 {name=Vrst2 value="dc 0 ac 0 pulse(0 1.2 20u 10n 10n 15u 20u)"}
 C {adc_bridge1.sym} 260 -160 0 0 {name=A3
 adc=adc1
 adc_bridge_model=adc_bridge

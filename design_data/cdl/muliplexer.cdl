@@ -1,0 +1,15 @@
+
+************************************************************************
+* Library Name: CustomMux
+* Cell Name:    multiplexer
+* View Name:    schematic
+************************************************************************
+
+
+* edit this part !!!!
+.SUBCKT multiplexer A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+MX1 Y A VSS VSS sg13_lv_nmos m=1 w=740.00n l=130.00n ng=1
+MX0 Y A VDD VDD sg13_lv_pmos m=1 w=1.12u l=130.00n ng=1
+.ENDS
+

@@ -1,0 +1,51 @@
+
+MACRO sg13g2_inv_1
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN sg13g2_inv_1 0 0 ;
+  SIZE 1.44 BY 3.78 ;
+  SYMMETRY X Y ;
+  SITE CoreSite ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    NETEXPR "VDD VDD!" ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0 3.56 1.44 4 ;
+        RECT 0.505 2.205 0.78 4 ;
+    END
+  END VDD
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.651 LAYER Metal1 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.045 0.595 1.275 3.175 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAMODEL OXIDE1 ;
+      ANTENNAGATEAREA 0.2418 LAYER Metal1 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.125 1.52 0.815 2 ;
+    END
+  END A
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    NETEXPR "VSS VSS!" ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0 -0.22 1.44 0.22 ;
+        RECT 0.485 -0.22 0.785 1.295 ;
+    END
+  END VSS
+  PROPERTY CatenaDesignType "deviceLevel" ;
+END sg13g2_inv_1

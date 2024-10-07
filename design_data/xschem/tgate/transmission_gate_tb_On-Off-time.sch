@@ -33,7 +33,35 @@ node="v_out
 v_in"}
 B 2 930 -650 1730 -250 {flags=graph
 
-y2=1.3
+y2=1.4
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1.5e-07
+divx=5
+subdivx=1
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+y1=0
+rainbow=0
+
+
+
+color="8 9"
+node="en_p
+v_out"
+hilight_wave=0}
+B 2 980 -600 1780 -200 {flags=graph
+
+y2=1.4
 ypos1=0
 ypos2=2
 divy=5
