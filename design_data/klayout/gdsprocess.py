@@ -29,9 +29,13 @@ print(cell)
 
 lay = cell.get_layers()
 dt =  cell.get_datatypes()
+text = cell.get_texttypes()
+lab = cell.get_labels()
 
 print(f"{lay}")
 print(f"{dt}")
+print(f"{text}")
+print(f"{lab}")
 
 layer_number = 8
 datatype_number = 2
